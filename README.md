@@ -27,10 +27,12 @@
   <li>props are readonly we can't change that</li>
 </ul>
 
-<h1></h1>
+<h1>NPM vs NPX</h1>
 <ul>
-  <li></li>
-  <li></li>
+  <li>npm is used to install, update and manage packages</li>
+  <li>npx is used to execute the packages</li>
+  <li>npx download the latest version every time and execute the package</li>
+  <li>npx package-name command</li>
 </ul>
 
 <h1></h1>
