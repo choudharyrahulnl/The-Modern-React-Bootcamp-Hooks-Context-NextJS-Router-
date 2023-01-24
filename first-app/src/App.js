@@ -3,52 +3,65 @@ import Hello from './components/hello';
 import Machine from "./components/machine";
 import Messages from "./components/messages";
 import HelloFrom from "./components/hello-from";
+import {choice, remove} from "./exercise/helper";
+import foods from "./exercise/foods";
 
 function App() {
-  return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
 
-      <div>
-          <Hello name={'Rahul'}
-                 age={32}
-                 country={['India','Netherlands']}
-                 isFunny={true}
-                 bangs={4}
-                 img={'https://images.unsplash.com/photo-1674304985678-f1ab79f726c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}
-                 />
+    let fruit = choice(foods);
+    let remain = remove(foods, fruit);
 
-          <p>-----------------------------------------------------------------------</p>
+    return (
+        // <div className="App">
+        //   <header className="App-header">
+        //     <img src={logo} className="App-logo" alt="logo" />
+        //     <p>
+        //       Edit <code>src/App.js</code> and save to reload.
+        //     </p>
+        //     <a
+        //       className="App-link"
+        //       href="https://reactjs.org"
+        //       target="_blank"
+        //       rel="noopener noreferrer"
+        //     >
+        //       Learn React
+        //     </a>
+        //   </header>
+        // </div>
 
-          <Machine s1={'🍇'} s2={'🍉'} s3={'🍊'} />
-          <Machine s1={'🍇'} s2={'🍇'} s3={'🍇'} />
-          <Machine s1={'🍇'} s2={'🍉'} s3={'🍊'} />
 
-          <p>-----------------------------------------------------------------------</p>
+        <div>
+            <Hello name={'Rahul'}
+                   age={32}
+                   country={['India', 'Netherlands']}
+                   isFunny={true}
+                   bangs={4}
+                   img={'https://images.unsplash.com/photo-1674304985678-f1ab79f726c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}
+            />
 
-          <Messages messages={[{id:1, message:'Today is Sunday'},{id:2, message:'Tomorrow is Monday'}]}/>
+            <p>-----------------------------------------------------------------------</p>
 
-          <p>-----------------------------------------------------------------------</p>
+            <Machine s1={'🍇'} s2={'🍉'} s3={'🍊'}/>
+            <Machine s1={'🍇'} s2={'🍇'} s3={'🍇'}/>
+            <Machine s1={'🍇'} s2={'🍉'} s3={'🍊'}/>
 
-          <HelloFrom to={'Himanshu'}/>
+            <p>-----------------------------------------------------------------------</p>
 
-          <p>-----------------------------------------------------------------------</p>
-      </div>
-  );
+            <Messages messages={[{id: 1, message: 'Today is Sunday'}, {id: 2, message: 'Tomorrow is Monday'}]}/>
+
+            <p>-----------------------------------------------------------------------</p>
+
+            <HelloFrom to={'Himanshu'}/>
+
+            <p>-----------------------------------------------------------------------</p>
+
+            <p><b>Exercise</b></p>
+            <p>There are {foods.length} fruits</p>
+            <p>I like one {fruit}, please</p>
+            <p>Here you go {fruit}</p>
+            <p>Fruits remain {remain.length}</p>
+        </div>
+    );
 }
 
 export default App;
