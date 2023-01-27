@@ -4,10 +4,6 @@ import './Box.css';
 
 class Box extends Component {
 
-    // static defaultProps = {
-    //     allColors: ['red', 'green', 'blue', 'yellow']
-    // }
-
     state = {
         color: choice(this.props.allColors)
     }
