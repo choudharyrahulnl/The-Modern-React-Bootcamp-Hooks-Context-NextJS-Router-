@@ -35,6 +35,17 @@
   <li>npx package-name command</li>
 </ul>
 
+<h1>Props Vs State</h1>
+<ul>
+  <li>We need to declare state in constructor or as attribute (with babel)</li>
+  <li>we need to call super(props) if we need to declare state in constructor</li>
+  <li>to update state we call this.setState({}), we should not call this in constructor and render</li>
+  <li>when we update the state, component get re-render, it's not immediate, React might delay it and then update several other components in a single pass</li>
+  <li>If state is not declared we will get error null</li>
+  <li>props are pre-declared and if not present we don't get any error</li>
+  <li>if we need to access the props inside the constructor we need to call super(props)</li>
+</ul>
+
 <h1></h1>
 <ul>
   <li></li>
@@ -46,3 +57,53 @@
   <li></li>
   <li></li>
 </ul>
+
+<h1></h1>
+<ul>
+  <li></li>
+  <li></li>
+</ul>
+
+<h1></h1>
+<ul>
+  <li></li>
+  <li></li>
+</ul>
+
+<h1></h1>
+<ul>
+  <li></li>
+  <li></li>
+</ul>
+
+<h1></h1>
+<ul>
+  <li></li>
+  <li></li>
+</ul>
+
+<h1></h1>
+<ul>
+  <li></li>
+  <li></li>
+</ul>
+
+<h1></h1>
+<ul>
+  <li></li>
+  <li></li>
+</ul>
+
+<h1></h1>
+<ul>
+  <li></li>
+  <li></li>
+</ul>
+
+<h1></h1>
+<ul>
+  <li></li>
+  <li></li>
+</ul>
+
+
