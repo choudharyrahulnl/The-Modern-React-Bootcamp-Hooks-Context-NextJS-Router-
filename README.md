@@ -46,10 +46,11 @@
   <li>if we need to access the props inside the constructor we need to call super(props)</li>
 </ul>
 
-<h1></h1>
+<h1>Form</h1>
 <ul>
-  <li></li>
-  <li></li>
+  <li>Set State</li>
+  <li>Handle Change - onChange()</li>
+  <li>htmlFor used with id</li>
 </ul>
 
 <h1></h1>
